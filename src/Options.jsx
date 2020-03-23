@@ -5,7 +5,14 @@ import './index.css';
 const Options = ({ harmless, delicate, offensive, onBadgeClick }) => {
 
   return (
-    <div className="w-100 center-text row text-center" style={{ height: '8vh' }}>
+    <div
+      className="center-text row text-center"
+      style={{
+        height: '8vh',
+        padding: 0,
+        margin: '0'
+      }}
+    >
       <div
         className="col"
         onClick={onBadgeClick}
@@ -20,7 +27,7 @@ const Options = ({ harmless, delicate, offensive, onBadgeClick }) => {
           },
         }}
       >
-        <span className="text-uppercase" style={{ paddingTop: '10px' }}>
+        <span className="text-uppercase">
           Inofensivo<br />
           Harmless
         </span>

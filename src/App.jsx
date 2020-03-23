@@ -39,12 +39,10 @@ function App() {
   };
 
   return (
-    <div style={{ height: '100vh' }}>
-      <div className="">
-        <Options harmless={harmless} offensive={offensive} delicate={delicate} onBadgeClick={onBadgeClick} />
-        <Message getMessage={fetchData} statement={statement} getStatement={fetchData} />
-        <Message getMessage={fetchData} statement={statementSpanish} getStatement={fetchData} />
-      </div>
+    <div style={{ height: '100vh', padding: 0, margin: 0 }}>
+      <Options harmless={harmless} offensive={offensive} delicate={delicate} onBadgeClick={onBadgeClick} />
+      <Message getMessage={fetchData} statement={statement} getStatement={fetchData} />
+      <Message getMessage={fetchData} statement={statementSpanish} getStatement={fetchData} />
     </div>
   );
 }

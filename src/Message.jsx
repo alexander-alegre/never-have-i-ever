@@ -3,8 +3,21 @@ import PropTypes from 'prop-types';
 
 const Message = ({ statement, getStatement }) => {
   return (
-    <div className="w-100 text-center border">
-      <h1 style={{ fontSize: 100, height: '45vh' }} onClick={getStatement}>{statement}</h1>
+    <div className="text-center border">
+      <h1
+        onClick={getStatement}
+        style={{
+          height: '45vh',
+          width: '100vw',
+          ':after': {
+            content: "",
+            display: 'inline-block',
+            width: '100%'
+          },
+        }}
+      >
+        {statement}
+      </h1>
     </div>
   );
 };
