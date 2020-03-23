@@ -5,8 +5,8 @@ import { getSentence } from './api/gameApi';
 import { translate } from './api/translate';
 
 function App() {
-  const [statement, setStatement] = useState('Click to Start');
-  const [statementSpanish, setStatementSpanish] = useState('');
+  const [statement, setStatement] = useState('Click / Touch to Start');
+  const [statementSpanish, setStatementSpanish] = useState('Haga Clic / Toca Para Comenzar');
   const [harmless, setHarmless] = useState(true);
   const [delicate, setDelicate] = useState(true);
   const [offensive, setOffensive] = useState(true);
@@ -39,12 +39,11 @@ function App() {
   };
 
   return (
-    <div className="">
+    <div style={{ height: '100vh' }}>
       <div className="">
         <Options harmless={harmless} offensive={offensive} delicate={delicate} onBadgeClick={onBadgeClick} />
-        <br/>
-        <hr/>
-        <Message getMessage={fetchData} statement={statement} statementSpanish={statementSpanish} getStatement={fetchData} />
+        <Message getMessage={fetchData} statement={statement} getStatement={fetchData} />
+        <Message getMessage={fetchData} statement={statementSpanish} getStatement={fetchData} />
       </div>
     </div>
   );

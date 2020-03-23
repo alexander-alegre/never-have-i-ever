@@ -1,12 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Message = ({ statement, statementSpanish, getStatement }) => {
+const Message = ({ statement, getStatement }) => {
   return (
-    <div className="w-100 text-center">
-      <h1 style={{ fontSize: 100, color: 'tomato' }} className="title" onClick={getStatement}>{statement}</h1>
-      <hr/>
-      <h1 style={{ fontSize: 100, color: 'lightblue' }} className="title" onClick={getStatement}>{statementSpanish}</h1>
+    <div className="w-100 text-center border">
+      <h1 style={{ fontSize: 100, height: '45vh' }} onClick={getStatement}>{statement}</h1>
     </div>
   );
 };
@@ -14,12 +12,10 @@ const Message = ({ statement, statementSpanish, getStatement }) => {
 Message.propTypes = {
   getStatement: PropTypes.func.isRequired,
   statement: PropTypes.string,
-  statementSpanish: PropTypes.string,
 };
 
 Message.defaultProps = {
   statement: 'Click to start...',
-  statementSpanish: 'Click to start...'
 };
 
 export default Message;

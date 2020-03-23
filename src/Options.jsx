@@ -1,14 +1,70 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Badge } from 'reactstrap';
+import './index.css';
 
 const Options = ({ harmless, delicate, offensive, onBadgeClick }) => {
 
   return (
-    <div className="w-100 center-text">
-      <Badge onClick={onBadgeClick} id="harmless" color={harmless ? 'primary' : 'secondary'}>Inofensivo / Harmless</Badge>
-      <Badge onClick={onBadgeClick} id="delicate" color={delicate ? 'primary' : 'secondary'}>Delicado / Delicate</Badge>
-      <Badge onClick={onBadgeClick} id="offensive" color={offensive ? 'primary' : 'secondary'}>Ofensivo / Offensive</Badge>
+    <div className="w-100 center-text row text-center" style={{ height: '8vh' }}>
+      <div
+        className="col"
+        onClick={onBadgeClick}
+        id="harmless"
+        style={{
+          background: harmless ? 'linear-gradient(90deg, #cfecd0, #ffc5ca)' : '',
+          color: harmless ? '#fff' : '#222',
+          ':after': {
+            content: "",
+            display: 'inline-block',
+            width: '100%'
+          },
+        }}
+      >
+        <span className="text-uppercase" style={{ paddingTop: '10px' }}>
+          Inofensivo<br />
+          Harmless
+        </span>
+      </div>
+      <div
+        className="col"
+        onClick={onBadgeClick}
+        id="delicate"
+        style={{
+          borderRight: '1px solid #ddd',
+          borderLeft: '1px solid #ddd',
+          background: delicate ? 'linear-gradient(90deg, #ffc5ca, #cfecd0)' : '',
+          color: delicate ? '#fff' : '#222',
+          ':after': {
+            content: "",
+            display: 'inline-block',
+            width: '100%'
+          },
+        }}
+      >
+        <span className="text-uppercase">
+          Delicado<br />
+          Delicate
+        </span>
+      </div>
+      <div
+        className="col"
+        onClick={onBadgeClick}
+        id="offensive"
+        style={{
+          background: offensive ? 'linear-gradient(90deg, #cfecd0, #ffc5ca)' : '',
+          color: offensive ? '#fff' : '#222',
+          ':after': {
+            content: "",
+            display: 'inline-block',
+            width: '100%'
+          },
+        }}
+      >
+        <span className="text-uppercase">
+          Ofensivo<br />
+          Offensive
+        </span>
+      </div>
     </div>
   );
 };

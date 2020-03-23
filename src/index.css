@@ -1,0 +1,39 @@
+/* Gradient 1 */
+.g1 {
+  background: linear-gradient(90deg, #69b7eb, #b3dbd3, #f4d6db);
+}
+
+/* Gradient 2 */
+.g2 {
+  background: linear-gradient(90deg, #cfecd0, #ffc5ca);
+}
+
+/* Gradient 3 */
+.g3 {
+  background: linear-gradient(90deg, #f598a8, #f6edb2);
+}
+
+/* Gradient 4 */
+.g4 {
+  background: linear-gradient(90deg, #ee5c87, #f1a4b5, #d587b3);
+}
+
+/* Gradient 5 */
+.g5 {
+  background: linear-gradient(90deg, #b9deed, #efefef);
+}
+
+/* Gradient 6 */
+.g6 {
+  background: linear-gradient(90deg, #aea4e3, #d3ffe8);
+}
+
+/* Gradient 7 */
+.g7 {
+  background: linear-gradient(90deg, #faf0cd, #fab397);
+}
+
+/* Gradient 8 */
+.g8 {
+  background: linear-gradient(90deg, #cfecd0, #a0cea7, #9ec0db);
+}
