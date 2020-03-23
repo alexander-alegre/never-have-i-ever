@@ -5,6 +5,7 @@ import { getSentence } from './api/gameApi';
 import { translate } from './api/translate';
 
 function App() {
+  const [loading, setLoading] = useState(false);
   const [statement, setStatement] = useState('Click / Touch to Start');
   const [statementSpanish, setStatementSpanish] = useState('Haga Clic / Toca Para Comenzar');
   const [harmless, setHarmless] = useState(true);
@@ -12,6 +13,7 @@ function App() {
   const [offensive, setOffensive] = useState(true);
 
   const onBadgeClick = e => {
+    if (loading) return;
     const badge = e.target.id;
     switch (badge) {
       case 'harmless':
@@ -30,11 +32,14 @@ function App() {
   };
 
   const fetchData = async () => {
+    if (loading) return;
+    setLoading(true);
     const data = await getSentence({ harmless, delicate, offensive });
     console.log(data);
     const translatedText = await translate(data.statement);
     setStatementSpanish(translatedText.results || 'Error');
     setStatement(data.statement || 'Error fetching data...');
+    setLoading(false);
     return data;
   };
 

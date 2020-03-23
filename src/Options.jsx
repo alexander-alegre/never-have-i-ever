@@ -8,7 +8,7 @@ const Options = ({ harmless, delicate, offensive, onBadgeClick }) => {
     <div
       className="center-text row text-center"
       style={{
-        height: '8vh',
+        height: '9vh',
         padding: 0,
         margin: '0'
       }}
@@ -25,6 +25,9 @@ const Options = ({ harmless, delicate, offensive, onBadgeClick }) => {
             display: 'inline-block',
             width: '100%'
           },
+          padding: '0',
+          margin: '0',
+          fontFamily: 'Chewy',
         }}
       >
         <span className="text-uppercase">
@@ -46,6 +49,9 @@ const Options = ({ harmless, delicate, offensive, onBadgeClick }) => {
             display: 'inline-block',
             width: '100%'
           },
+          padding: '0',
+          margin: '0',
+          fontFamily: 'Chewy',
         }}
       >
         <span className="text-uppercase">
@@ -65,6 +71,9 @@ const Options = ({ harmless, delicate, offensive, onBadgeClick }) => {
             display: 'inline-block',
             width: '100%'
           },
+          padding: '0',
+          margin: '0',
+          fontFamily: 'Chewy',
         }}
       >
         <span className="text-uppercase">
