@@ -27,6 +27,7 @@ const Message = ({ statement, getStatement }) => {
           padding: 0,
           margin: 0,
           fontFamily: 'Bellota',
+          fontSize: 50
         }}
       >
         {statement}
