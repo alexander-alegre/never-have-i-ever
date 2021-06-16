@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const GAME_API = `https://api.neverhaveiever.io/v1/statements/random?`;
+// "https://api.nhie.io/v1/statements/random?category[]=harmless&category[]=delicate&category[]=offensive"
+const GAME_API = `https://api.nhie.io/v1/statements/random?`;
 const OFFENSIVE = 'category[]=offensive';
 const DELICATE = 'category[]=delicate';
 const HARMLESS = 'category[]=harmless';
